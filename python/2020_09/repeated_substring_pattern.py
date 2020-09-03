@@ -7,7 +7,7 @@ Solution Thoughts:
 If the I rotate the string one char at a time and it is ever the same string, it must be made of repeated segments.
 
 Time Complexity:
-    O(n^2) due to the for loop and comparison.
+    O(2n) due to the for loop and comparison.
     
 Space Complexity:
     Sigma(1) for the single new string being created.
