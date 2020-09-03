@@ -18,7 +18,7 @@ def repeatedSubstringPattern(s: str) -> bool:
     # rotate string and compare
     new_s = s[:]
     # print(f"{s}")
-    for _ in range(len(s)-1):
+    for _ in range(len(s)//2):
         new_s = f"{new_s[-1]}{new_s[:-1]}"
         # print(f"\t{new_s}")
         if new_s == s:
