@@ -7,7 +7,7 @@ https://leetcode.com/explore/challenge/card/september-leetcoding-challenge/554/w
 
 Solution Thoughts:
 
-1. Perform a pre-order search (left, val, right) to make two lists that are already ordered.
+1. Perform an in-order search (left, val, right) to make two lists that are already ordered.
    This will simplify the work to sort them together.
 2. Combine the two lists and sort those. Might be more efficient ways to zipper them.
 
