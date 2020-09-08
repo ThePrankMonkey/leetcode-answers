@@ -12,32 +12,12 @@ https://leetcode.com/explore/challenge/card/september-leetcoding-challenge/555/w
 """
 
 
-# class TreeNode:
-#     # Definition for a binary tree node.
-#     def __init__(self, val=None, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-
-#     def insert(self, num):
-#         if self.val:
-#             if num == 0:
-#                 if self.left is None:
-#                     print(f"Creating a node for {num}")
-#                     self.left = TreeNode(num)
-#                 else:
-#                     self.left.insert(num)
-#             elif num == 1:
-#                 if self.right is None:
-#                     print(f"Creating a node for {num}")
-#                     self.right = TreeNode(num)
-#                 else:
-#                     self.right.insert(num)
-#             else:
-#                 print("Something is broken")
-#         else:
-#             print(f"Setting a node to {num}")
-#             self.val = num
+class TreeNode:
+    # Definition for a binary tree node.
+    def __init__(self, val=None, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
 
 class Solution:
@@ -59,10 +39,12 @@ class Solution:
             self.traverse_and_track(node.right, current)
 
 
-# def test_1():
-#     insertions = [1, 0, 1, 0, 1, 0, 1]
-#     root = TreeNode()
-#     for num in insertions:
-#         print(f"Insertion {num}")
-#         root.insert(num)
-#     assert Solution().sumRootToLeaf(root) == 22
+def test_1():
+    root = TreeNode(1)
+    root.left = TreeNode(0)
+    root.left.left = TreeNode(0)
+    root.left.right = TreeNode(1)
+    root.right = TreeNode(1)
+    root.right.left = TreeNode(0)
+    root.right.right = TreeNode(1)
+    assert Solution().sumRootToLeaf(root) == 22
