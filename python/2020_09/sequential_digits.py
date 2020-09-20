@@ -10,6 +10,13 @@ Initially, I thought of just iterating over every value between low and high, an
 Then I thought of just making every sequential value between low and high. My first attempt follows where I use strings to build the numbers.
     String casting was used because it's incredibly fast. Even faster than logarithmic math.
     https://stackoverflow.com/questions/33947632/get-most-significant-digit-in-python/33947673
+
+Complexity:
+
+Time: O(1)
+    There are a finite number of possible sequential strings in any range, so this is essentially constant time.
+Space: O(1)
+    I'm only working on a single string at a time, and tracking a couple numbers.
 """
 
 
