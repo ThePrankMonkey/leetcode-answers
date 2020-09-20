@@ -8,6 +8,8 @@ https://leetcode.com/explore/challenge/card/september-leetcoding-challenge/556/w
 Solution Thoughts:
 Initially, I thought of just iterating over every value between low and high, and checking if they were sequential, but that sounded slow.
 Then I thought of just making every sequential value between low and high. My first attempt follows where I use strings to build the numbers.
+    String casting was used because it's incredibly fast. Even faster than logarithmic math.
+    https://stackoverflow.com/questions/33947632/get-most-significant-digit-in-python/33947673
 """
 
 
